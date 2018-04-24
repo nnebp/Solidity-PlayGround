@@ -15,6 +15,8 @@ contract MultiNumberBettingV1 {
 
   uint8[3]  numArray;
 
+  string lastWinnerName = "***";
+
   // Ex-1 Part-1
   function MultiNumberBettingV1(uint8 num0, uint8 num1, uint8 num2) {
     // constructor
@@ -24,11 +26,12 @@ contract MultiNumberBettingV1 {
   }
 
   // Ex-1 Part-3
-  function guess(uint8 num) returns (bool){
+  function guess(uint8 num, string name) returns (bool){
     for(uint8 i = 0 ; i < numArray.length ; i++){
       if(numArray[i] == num) {
         // Increase the winner count
         winnerCount++;
+        lastWinnerName = name;
         return true;
       }
     }
@@ -41,6 +44,11 @@ contract MultiNumberBettingV1 {
     return (loserCount+winnerCount);
   }
 
+  function getLastWinner() returns (string){
+      //TODO change to return the last/first? 3 chars
+    return lastWinnerName;
+
+  }
   // Ex-3
   /**
    * make a change to the 2_deploy_contracts.js

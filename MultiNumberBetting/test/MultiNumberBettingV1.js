@@ -10,7 +10,7 @@ contract('MultiNumberBettingV1', function(accounts) {
     }).then(function(result){
       console.log("Total Guesses=",result.toNumber());
       // Make a guess
-      multi_number_betting_v1.guess(1, "testing");
+      multi_number_betting_v1.guess(1, "tes");
       //return multi_number_betting_v1.totalGuesses.call();
       return multi_number_betting_v1.getLastWinner.call();
     }).then(function(result){

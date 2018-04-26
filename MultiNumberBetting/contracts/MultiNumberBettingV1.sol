@@ -46,7 +46,14 @@ contract MultiNumberBettingV1 {
 
   function getLastWinner() returns (string){
       //TODO change to return the last/first? 3 chars
-    return lastWinnerName;
+    bytes memory result = new bytes(3);
+    bytes memory winnerBytes = bytes(lastWinnerName);
+
+    for (uint i = 0; i < 3; i++) {
+      result[i] = winnerBytes[i];
+    }
+
+    return string(result);
 
   }
   // Ex-3

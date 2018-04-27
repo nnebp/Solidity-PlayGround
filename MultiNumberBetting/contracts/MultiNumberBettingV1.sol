@@ -9,13 +9,15 @@ pragma solidity ^0.4.17;
 
 contract MultiNumberBettingV1 {
 
-  // Ex-1 Part-2
+  //TODO explicit visibility on state vairables
   uint  loserCount;
   uint  winnerCount;
 
   uint8[3]  numArray;
 
   string lastWinnerName = "***";
+
+  uint lastWinnerAt = 0; //probably automatically 0?
 
   // Ex-1 Part-1
   function MultiNumberBettingV1(uint8 num0, uint8 num1, uint8 num2) {
@@ -32,6 +34,7 @@ contract MultiNumberBettingV1 {
         // Increase the winner count
         winnerCount++;
         lastWinnerName = name;
+        lastWinnerAt = now;
         return true;
       }
     }
@@ -56,6 +59,14 @@ contract MultiNumberBettingV1 {
     return string(result);
 
   }
+
+  //TODO delete
+  function getLastWinnerAt() returns (uint){
+    return lastWinnerAt;
+  }
+    daysSinceLastWinning()
+    hoursSinceLastWinning()
+    minutesSinceLastWinning()
   // Ex-3
   /**
    * make a change to the 2_deploy_contracts.js

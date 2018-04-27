@@ -12,6 +12,12 @@ contract('MultiNumberBettingV1', function(accounts) {
       // Make a guess
       multi_number_betting_v1.guess(1, "tes");
       //return multi_number_betting_v1.totalGuesses.call();
+      return multi_number_betting_v1.getLastWinnerAt.call();
+    }).then(function(result){
+      console.log("Last winner at=",result.toNumber());
+      // Make a guess
+      multi_number_betting_v1.guess(1, "tes");
+      //return multi_number_betting_v1.totalGuesses.call();
       return multi_number_betting_v1.getLastWinner.call();
     }).then(function(result){
       console.log("Name = ",result);

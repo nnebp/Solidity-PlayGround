@@ -12,6 +12,7 @@ contract MultiNumberBettingV1 {
   //TODO explicit visibility on state vairables
   uint  loserCount;
   uint  winnerCount;
+  address winner;
 
   uint8[3]  numArray;
 
@@ -29,12 +30,15 @@ contract MultiNumberBettingV1 {
 
   // Ex-1 Part-3
   function guess(uint8 num, string name) returns (bool){
+    assert(num < 10);
+
     for(uint8 i = 0 ; i < numArray.length ; i++){
       if(numArray[i] == num) {
         // Increase the winner count
         winnerCount++;
         lastWinnerName = name;
         lastWinnerAt = now;
+        winner = msg.sender;
         return true;
       }
     }
@@ -64,9 +68,27 @@ contract MultiNumberBettingV1 {
   function getLastWinnerAt() returns (uint){
     return lastWinnerAt;
   }
-    daysSinceLastWinning()
-    hoursSinceLastWinning()
-    minutesSinceLastWinning()
+
+  function daysSinceLastWinning() returns (uint){
+      if (lastWinnerAt > 0) {
+        return (now - lastWinnerAt) / 60 / 60 / 24;
+        //dont really care if i got this right
+      }
+  }
+
+  function hoursSinceLastWinning() returns (uint){
+    if (lastWinnerAt > 0) {
+      return (now - lastWinnerAt) / 60 / 60;
+    }
+  }
+
+  function minutesSinceLastWinning() returns (uint){
+    //if (lastWinnerAt > 0) {
+      //return ((now - lastWinnerAt) / 60);
+    return  now - lastWinnerAt;
+    //}
+  }
+
   // Ex-3
   /**
    * make a change to the 2_deploy_contracts.js

@@ -22,8 +22,9 @@ contract('MultiNumberBettingV1', function(accounts) {
     }).then(function(result){
       console.log("Name = ",result);
       assert.isTrue(result == "testing");
-      //console.log("Total Guesses=",result.toNumber());
-      //assert.isTrue(result.toNumber() == 1);
+      return multi_number_betting_v1.minutesSinceLastWinning().call();
+    }).then(function(result){
+      console.log("seconds since last winner= ",result.toNumber());
     });
   });
 });

@@ -17,17 +17,16 @@ contract MultiNumberBettingV1 {
 
   uint8[3]  numArray;
 
-  string lastWinnerName = "***";
-
   uint lastWinnerAt = 0; //probably automatically 0?
 
   struct Winner {
     address winnerAddress;
     string name;
     uint8 guess;
-    unit guessedAt;
+    uint guessedAt;
   }
-  mapping(string => Winner) winningAddresses;
+
+  mapping(address => Winner) winningAddresses;
 
   // Ex-1 Part-1
   function MultiNumberBettingV1(uint8 num0, uint8 num1, uint8 num2) {
@@ -45,9 +44,11 @@ contract MultiNumberBettingV1 {
       if(numArray[i] == num) {
         // Increase the winner count
         winnerCount++;
-        lastWinnerName = name;
-        lastWinnerAt = now;
-        winner = msg.sender;
+        Winner memory win = Winner(msg.sender, name, num, now);
+        //lastWinnerName = name;
+        //lastWinnerAt = now;
+        //winner = msg.sender;
+        winningAddresses[msg.sender] = win;
         return true;
       }
     }
@@ -60,6 +61,7 @@ contract MultiNumberBettingV1 {
     return (loserCount+winnerCount);
   }
 
+    /*
   function getLastWinner() returns (string){
       //TODO change to return the last/first? 3 chars
     bytes memory result = new bytes(3);
@@ -72,6 +74,7 @@ contract MultiNumberBettingV1 {
     return string(result);
 
   }
+  */
 
   //TODO delete
   function getLastWinnerAt() returns (uint){

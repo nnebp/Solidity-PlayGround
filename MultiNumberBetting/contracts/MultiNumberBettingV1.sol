@@ -10,6 +10,7 @@ pragma solidity ^0.4.17;
 contract MultiNumberBettingV1 {
 
   //TODO explicit visibility on state vairables
+  //TODO delete state vars in struct
   uint  loserCount;
   uint  winnerCount;
   address winner;
@@ -19,6 +20,14 @@ contract MultiNumberBettingV1 {
   string lastWinnerName = "***";
 
   uint lastWinnerAt = 0; //probably automatically 0?
+
+  struct Winner {
+    address winnerAddress;
+    string name;
+    uint8 guess;
+    unit guessedAt;
+  }
+  mapping(string => Winner) winningAddresses;
 
   // Ex-1 Part-1
   function MultiNumberBettingV1(uint8 num0, uint8 num1, uint8 num2) {

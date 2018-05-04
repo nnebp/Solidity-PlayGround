@@ -35,6 +35,10 @@ contract MultiNumberBettingV1 {
     numArray[1] = num1;
     numArray[2] = num2;
   }
+  function checkWinning(address) returns(address, string, uint8, uint) {
+    return (winningAddresses[winner].winnerAddress, winningAddresses[winner].name,
+      winningAddresses[winner].guess, winningAddresses[winner].guessedAt);
+  }
 
   // Ex-1 Part-3
   function guess(uint8 num, string name) returns (bool){

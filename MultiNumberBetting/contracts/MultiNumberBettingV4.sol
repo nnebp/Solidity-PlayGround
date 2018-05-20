@@ -70,7 +70,12 @@ contract MultiNumberBettingV4 is MultiNumberBettingAbstractV1 {
 
     // If num > 10 revert
     if(num > 10) {
+      //THis version of solidity cant return with revert?
       revert();
+    }
+
+    if (msg.value > MAX_BET || msg.value < MIN_BET ) {
+      //revert ();
     }
 
     for (uint8 i = 0 ; i < numArray.length ; i++){
@@ -91,6 +96,8 @@ contract MultiNumberBettingV4 is MultiNumberBettingAbstractV1 {
 
         lastWinnerAt = winnersMapping[msg.sender].guessedAt;
         winner = msg.sender;
+
+        msg.sender.transfer(2 * msg.value);
 
         return true;
       }

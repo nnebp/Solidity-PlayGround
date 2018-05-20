@@ -7,7 +7,10 @@ pragma solidity ^0.4.17;
  * http://acloudfan.com/learn-blockchain
  */
 
-contract MultiNumberBettingV1 {
+contract MultiNumberBettingAbstractV1 {
+}
+
+contract MultiNumberBettingV1 is MultiNumberBettingAbstractV1{
 
   //TODO explicit visibility on state vairables
   //TODO delete state vars in struct

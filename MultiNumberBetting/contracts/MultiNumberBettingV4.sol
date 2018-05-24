@@ -11,6 +11,16 @@ contract MultiNumberBettingAbstractV1 {
   uint constant public MAX_BET = 5 ether;
   uint constant public MIN_BET = 1 ether;
 
+  address owner;
+
+  modifier ownerOnly(uint8 amt) {
+    if (msg.sender == owner) {
+      _;
+    } else {
+      revert(); //throw??
+    }
+  }
+
   function MultiNumberBettingV4(uint8 num0, uint8 num1, uint8 num2) {}
 
   function guess(uint8 num, string name) payable returns (bool){}
@@ -38,7 +48,7 @@ contract MultiNumberBettingV4 is MultiNumberBettingAbstractV1 {
   uint public  winnerCount;
 
   uint public lastWinnerAt;
-  
+
   //Ex - 2 Part - 1 Remove this variable
   // string lastWinnerName ;
 
@@ -63,10 +73,12 @@ contract MultiNumberBettingV4 is MultiNumberBettingAbstractV1 {
     numArray[0] = num0;
     numArray[1] = num1;
     numArray[2] = num2;
+
+    owner = msg.sender;
   }
 
   
-  function guess(uint8 num, string name) payable returns (bool){
+  function guess(uint8 num, string name) public payable returns (bool){
 
     // If num > 10 revert
     if(num > 10) {
@@ -74,9 +86,14 @@ contract MultiNumberBettingV4 is MultiNumberBettingAbstractV1 {
       revert();
     }
 
-    if (msg.value > MAX_BET || msg.value < MIN_BET ) {
-      //revert ();
+    //should be 2x the best but just check if it works
+    if (this.balance < msg.value ) {
+      revert();
     }
+
+    //if (msg.value > MAX_BET || msg.value < MIN_BET ) {
+      //revert ();
+    //}
 
     for (uint8 i = 0 ; i < numArray.length ; i++){
       if (numArray[i] == num) {
@@ -97,7 +114,9 @@ contract MultiNumberBettingV4 is MultiNumberBettingAbstractV1 {
         lastWinnerAt = winnersMapping[msg.sender].guessedAt;
         winner = msg.sender;
 
-        msg.sender.transfer(2 * msg.value);
+        //TODO is this line causeing a problem?
+        //TODO problem was sending back more money than was in the contract
+        msg.sender.transfer(msg.value);
 
         return true;
       }

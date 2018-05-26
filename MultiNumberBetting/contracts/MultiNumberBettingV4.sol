@@ -13,7 +13,7 @@ contract MultiNumberBettingAbstractV1 {
 
   address owner;
 
-  modifier ownerOnly(uint8 amt) {
+  modifier ownerOnly() {
     if (msg.sender == owner) {
       _;
     } else {
@@ -125,6 +125,9 @@ contract MultiNumberBettingV4 is MultiNumberBettingAbstractV1 {
     return false;
   }
 
+  function ownerWithdraw(uint amount) ownerOnly {
+    owner.transfer(amount);
+  }
   function totalGuesses() returns (uint){
     return (loserCount+winnerCount);
   }

@@ -22,13 +22,13 @@ contract('MultiNumberBettingV4', function(accounts) {
 
       //TODO test payable portion of function?
       // Send a winner guess from John
-      multi_number_betting_v4.guess(3,"John Miller",{from:johns_address});
+       var sendValue = web3.toWei(3,'ether');
+      multi_number_betting_v4.guess(3,"John Miller",{from:johns_address, value:sendValue});
       // Send a losing guess from Bill
       multi_number_betting_v4.guess(8,"Bill Tale",{from:bills_address});
      
       // Get the last winner name
       return multi_number_betting_v4.getLastWinnerInfo.call();
-
     }).then(function(result){
       // Result is an array: address, name, guess, guessedAt
       console.log(result[0], result[1], result[2].toNumber());

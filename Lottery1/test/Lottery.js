@@ -25,11 +25,12 @@ contract ('Lottery', (accounts) => {
     lottery = await Lottery.new();
   });
 
+  //TODO delete hi function related tests
   it("should assert true", async function() {
 
     let hi  = await lottery.hi( );
 
-    await lottery.enter(5, {from: accounts[1]});
+    await lottery.join(5, {from: accounts[1]});
     let guessed = await lottery.getGuess( accounts[1] );
 
     console.log("Result string = ", hi);

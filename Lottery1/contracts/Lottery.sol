@@ -9,14 +9,12 @@ contract Lottery {
     uint8 minParticipants;
     uint8 joinedParticipants;
 
-    //TODO REVERSE  KV
-    mapping (address => uint8) entries;
+    mapping (uint8 => address) entries;
 
-    //TODO mapping address to number for tickets
+    //TODO array participants
 
     modifier  OwnerOnly {
         if(msg.sender != owner){
-            //TODO is revert the right thing to call?
             revert();
         } else {
             _;
@@ -32,14 +30,17 @@ contract Lottery {
         require (guess <= 100 && guess >= 1);
         require(joinedParticipants + 1 < maxParticipants);
         //cant buy the same number twice
-        require(entries[msg.sender] != guess);
+        //TODO uncomment
+        //require(entries[guess] != msg.sender);
 
-        entries[msg.sender] = guess;
         joinedParticipants++;
+        //TODO below line is causing problems
+        //participants[joinedParticipants] = msg.sender;
+        entries[guess] = msg.sender;
     }
 
-    function getGuess(address guessAddress) public  view returns (uint8){
-        return entries[guessAddress] ;
+    function getGuess(uint8 guess) public  view returns (address){
+        return entries[guess] ;
     }
 
     //TODO delete

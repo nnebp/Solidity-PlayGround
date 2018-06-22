@@ -31,9 +31,10 @@ contract ('Lottery', (accounts) => {
     let hi  = await lottery.hi( );
 
     await lottery.join(5, {from: accounts[1]});
-    let guessed = await lottery.getGuess( accounts[1] );
+    let guessed = await lottery.getGuess(5);
 
     console.log("Result string = ", hi);
-    console.log("guess is = ", guessed.toNumber());
+    console.log("guess is = ", guessed);
+    console.log("account is = ", accounts[1]);
   });
 });

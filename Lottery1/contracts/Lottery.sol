@@ -36,6 +36,7 @@ contract Lottery {
         joinedParticipants++;
         //TODO below line is causing problems
         //participants[joinedParticipants] = msg.sender;
+        participants.push(msg.sender);
         entries[guess] = msg.sender;
     }
 

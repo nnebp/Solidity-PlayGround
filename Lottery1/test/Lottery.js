@@ -27,14 +27,14 @@ contract ('Lottery', (accounts) => {
 
   //TODO delete hi function related tests
   it("should assert true", async function() {
-
-    let hi  = await lottery.hi( );
-
     await lottery.join(5, {from: accounts[1]});
     let guessed = await lottery.getGuess(5);
 
-    console.log("Result string = ", hi);
-    console.log("guess is = ", guessed);
-    console.log("account is = ", accounts[1]);
+    assert.strictEqual(guessed, accounts[1], "guess account does not match");
   });
+
+  //TODO test guess with number >100 < 0
+
+  //TODO test guess with same number twice
+
 });

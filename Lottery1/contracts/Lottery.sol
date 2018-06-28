@@ -20,6 +20,10 @@ contract Lottery {
             _;
         }
     }
+
+
+    event ChooseWinner(uint _chosenNumber,address winner);
+
     // Constructor
     function Lottery() public {
         owner = msg.sender;
@@ -41,7 +45,7 @@ contract Lottery {
     }
 
     //TODO make this owner only then switch to oracalize
-    function chooseWinner(uint8 winningNum) public {
+    function chooseWinner(uint8 winningNum) public OwnerOnly{
         address winner = entries[winningNum];
         //TODO this is deprecated i guess?
         winner.transfer(this.balance);

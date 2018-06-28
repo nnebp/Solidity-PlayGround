@@ -14,20 +14,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Lottery.sol" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Lottery.sol" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/contracts/Lottery.sol">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="57" column="5" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
+            <state relative-caret-position="321">
+              <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Lottery.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Lottery.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/Lottery.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="31" column="41" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
+            <state relative-caret-position="-26">
+              <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -49,8 +49,8 @@
         <option value="$PROJECT_DIR$/truffle.js" />
         <option value="$PROJECT_DIR$/migrations/1_initial_migration.js" />
         <option value="$PROJECT_DIR$/contracts/Migrations.sol" />
-        <option value="$PROJECT_DIR$/contracts/Lottery.sol" />
         <option value="$PROJECT_DIR$/test/Lottery.js" />
+        <option value="$PROJECT_DIR$/contracts/Lottery.sol" />
       </list>
     </option>
   </component>
@@ -138,15 +138,16 @@
       <updated>1528403814539</updated>
       <workItem from="1528403815669" duration="3621000" />
       <workItem from="1528639626142" duration="4259000" />
-      <workItem from="1529074047817" duration="17315000" />
+      <workItem from="1529074047817" duration="18586000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25195000" />
+    <option name="totallyTimeSpent" value="26466000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="31" width="1926" height="1003" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24960506" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -245,17 +246,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/contracts/Lottery.sol">
+    <entry file="file://$PROJECT_DIR$/test/Lottery.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="57" column="5" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
+        <state relative-caret-position="-26">
+          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/Lottery.js">
+    <entry file="file://$PROJECT_DIR$/contracts/Lottery.sol">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="31" column="41" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
+        <state relative-caret-position="321">
+          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
         </state>
       </provider>
     </entry>

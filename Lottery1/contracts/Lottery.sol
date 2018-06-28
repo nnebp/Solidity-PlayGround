@@ -40,14 +40,23 @@ contract Lottery {
         entries[guess] = msg.sender;
     }
 
+    //TODO make this owner only then switch to oracalize
+    function chooseWinner(uint8 winningNum) public {
+        address winner = entries[winningNum];
+        //TODO this is deprecated i guess?
+        winner.transfer(this.balance);
+        //pay money to winner
+        //TODO fire off event
+        //ChooseWinner(chosenNumber,participants[chosenNumber]);
+        //clear out mapping
+    }
+
     function getGuess(uint8 guess) public  view returns (address){
         return entries[guess] ;
     }
 
-    //TODO delete
-    function hi() public pure returns (string){
-        return "Hi Lottery!";
+    // Will receive any eth sent to the contract
+    function () external payable {
 
     }
-
 }

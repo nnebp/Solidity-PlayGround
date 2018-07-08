@@ -3,7 +3,8 @@ pragma solidity ^0.4.17;
 contract Lottery {
 
     address public owner;
-    address[] participants;
+    //TODO size magic number
+    address[100] public participants;
 
     uint8 maxParticipants;
     uint8 minParticipants;
@@ -39,8 +40,8 @@ contract Lottery {
 
         joinedParticipants++;
         //TODO below line is causing problems
-        //participants[joinedParticipants] = msg.sender;
-        participants.push(msg.sender);
+        participants[joinedParticipants] = msg.sender;
+        //participants.push(msg.sender);
         entries[guess] = msg.sender;
     }
 
@@ -49,9 +50,14 @@ contract Lottery {
         address winner = entries[winningNum];
         //TODO this is deprecated i guess?
         winner.transfer(this.balance);
+
+        //TODO delete everything in the mapping
+        for (uint8 i = 0; i < 100; i++) {
+            delete participants[i];
+        }
+
         //pay money to winner
-        //TODO fire off event
-        //ChooseWinner(chosenNumber,participants[chosenNumber]);
+        //ChooseWinner(winningNum,participants[winningNum]);
         //clear out mapping
     }
 

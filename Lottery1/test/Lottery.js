@@ -1,20 +1,4 @@
 const Lottery = artifacts.require("./Lottery.sol");
-/*
-contract('Lottery', function(accounts) {
-
-  it("should assert true", function() {
-    var hiAngely;
-    return Lottery.deployed().then(function(instance){
-      lottery = instance;
-      // Get the total guesses
-      return lottery.hi.call();
-    }).then(function(result){
-      console.log("Result string = ",result);
-    });
-  });
-
-});
-*/
 
 contract ('Lottery', (accounts) => {
 
@@ -31,17 +15,22 @@ contract ('Lottery', (accounts) => {
     console.log('original balance: ' + balance.toString(10)); // because you get a BigNumber
 
     //good example of how to send a contract money
-    await lottery.send(web3.toWei(1, "ether"));
-    await lottery.send(1234);
+    await lottery.send(web3.toWei(2, "ether"));
+    let addr = await lottery.getGuess(2);
+    console.log('original address: ' + addr); // because you get a BigNumber
+    //await lottery.send(1234);
 
     //join and win the lottery
     await lottery.join(4, {from: accounts[1]});
-    await lottery.chooseWinner(2);
+    await lottery.chooseWinner(4);
 
     let finalBalance = await web3.eth.getBalance(accounts[1]);
     console.log('balance after winning: ' + finalBalance.toString(10)); // because you get a BigNumber
+    //TODO needs to be a lot higher
     assert( finalBalance > balance);
   });
+
+  //TODO guess and lose
 
   it("should assert true", async function() {
     await lottery.join(5, {from: accounts[1]});

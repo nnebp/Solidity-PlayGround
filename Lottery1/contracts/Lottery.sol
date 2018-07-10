@@ -4,6 +4,7 @@ contract Lottery {
 
     address public owner;
     //TODO size magic number
+    //would this be more efficicent as a stack?
     address[100] public participants;
 
     uint8 maxParticipants;
@@ -11,8 +12,6 @@ contract Lottery {
     uint8 joinedParticipants;
 
     mapping (uint8 => address) entries;
-
-    //TODO array participants
 
     modifier  OwnerOnly {
         if(msg.sender != owner){
@@ -35,13 +34,10 @@ contract Lottery {
         require (guess <= 100 && guess >= 1);
         require(joinedParticipants + 1 < maxParticipants);
         //cant buy the same number twice
-        //TODO uncomment
         //require(entries[guess] != msg.sender);
 
         joinedParticipants++;
-        //TODO below line is causing problems
         participants[joinedParticipants] = msg.sender;
-        //participants.push(msg.sender);
         entries[guess] = msg.sender;
     }
 
@@ -51,9 +47,10 @@ contract Lottery {
         //TODO this is deprecated i guess?
         winner.transfer(this.balance);
 
-        //TODO delete everything in the mapping
+        //delete everything in the array/mapping
         for (uint8 i = 0; i < 100; i++) {
             delete participants[i];
+            delete entries[i];
         }
 
         //pay money to winner

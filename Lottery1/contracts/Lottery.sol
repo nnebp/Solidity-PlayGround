@@ -30,7 +30,8 @@ contract Lottery {
         maxParticipants = 100;
     }
 
-    function join(uint8 guess) public {
+    function join(uint8 guess, uint256 amount) public payable{
+        require(msg.value == amount);
         require (guess <= 100 && guess >= 1);
         require(joinedParticipants + 1 < maxParticipants);
         //cant buy the same number twice
@@ -53,6 +54,7 @@ contract Lottery {
             delete entries[i];
         }
 
+        //TODO rememove comments below??
         //pay money to winner
         //ChooseWinner(winningNum,participants[winningNum]);
         //clear out mapping
@@ -62,8 +64,4 @@ contract Lottery {
         return entries[guess] ;
     }
 
-    // Will receive any eth sent to the contract
-    function () external payable {
-
-    }
 }

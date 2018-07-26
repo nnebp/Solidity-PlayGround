@@ -3,10 +3,9 @@ pragma solidity ^0.4.17;
 contract Lottery {
 
     uint8 constant size = 100;
+
     address public owner;
 
-    //TODO size magic number
-    //would this be more efficicent as a stack?
     address[size] public participants;
 
     uint8 maxParticipants;
@@ -22,7 +21,6 @@ contract Lottery {
             _;
         }
     }
-
 
     event ChooseWinner(uint _chosenNumber,address winner);
 
@@ -46,8 +44,7 @@ contract Lottery {
 
     function chooseWinner(uint8 winningNum) public OwnerOnly{
         address winner = entries[winningNum];
-        //TODO this is deprecated i guess?
-        winner.transfer(this.balance);
+        winner.transfer(address(this).balance);
 
         //delete everything in the array/mapping
         for (uint8 i = 0; i < size; i++) {
@@ -55,10 +52,7 @@ contract Lottery {
             delete entries[i];
         }
 
-        //TODO rememove comments below??
-        //pay money to winner
-        //ChooseWinner(winningNum,participants[winningNum]);
-        //clear out mapping
+        emit ChooseWinner(winningNum,participants[winningNum]);
     }
 
     function getGuess(uint8 guess) public  view returns (address){

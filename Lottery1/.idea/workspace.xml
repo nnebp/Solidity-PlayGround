@@ -14,20 +14,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Lottery.sol" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Lottery.sol" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/contracts/Lottery.sol">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="850">
-              <caret line="65" selection-start-line="65" selection-end-line="65" />
+            <state relative-caret-position="17">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Lottery.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Lottery.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/Lottery.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="38" column="27" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="27" />
+            <state relative-caret-position="442">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
             </state>
           </provider>
         </entry>
@@ -49,8 +49,8 @@
         <option value="$PROJECT_DIR$/truffle.js" />
         <option value="$PROJECT_DIR$/migrations/1_initial_migration.js" />
         <option value="$PROJECT_DIR$/contracts/Migrations.sol" />
-        <option value="$PROJECT_DIR$/contracts/Lottery.sol" />
         <option value="$PROJECT_DIR$/test/Lottery.js" />
+        <option value="$PROJECT_DIR$/contracts/Lottery.sol" />
       </list>
     </option>
   </component>
@@ -71,6 +71,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -97,12 +98,11 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Reference/Blockchain-Course-Patterns-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../js/wikipedia-movie-data" />
     <property name="node.js.detected.package.prettier" value="true" />
     <property name="node.js.path.for.package.prettier" value="project" />
     <property name="node.js.selected.package.prettier" value="" />
@@ -141,12 +141,14 @@
       <workItem from="1529074047817" duration="18910000" />
       <workItem from="1530450801189" duration="699000" />
       <workItem from="1530914403769" duration="9014000" />
-      <workItem from="1532472164911" duration="697000" />
+      <workItem from="1532472164911" duration="4343000" />
+      <workItem from="1532715724902" duration="597000" />
+      <workItem from="1533396941216" duration="25000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37200000" />
+    <option name="totallyTimeSpent" value="41468000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="31" width="1926" height="1003" extended-state="6" />
@@ -177,6 +179,34 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/contracts/Lottery.sol">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/Lottery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contracts/Lottery.sol">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/Lottery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/contracts/Lottery.sol">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
@@ -290,17 +320,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/contracts/Lottery.sol">
+    <entry file="file://$PROJECT_DIR$/test/Lottery.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="65" selection-start-line="65" selection-end-line="65" />
+        <state relative-caret-position="442">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/Lottery.js">
+    <entry file="file://$PROJECT_DIR$/contracts/Lottery.sol">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="38" column="27" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="27" />
+        <state relative-caret-position="17">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>

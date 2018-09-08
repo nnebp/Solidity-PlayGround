@@ -6,7 +6,9 @@ contract('HiAngely', function(accounts) {
     return HiAngely.deployed().then(function(instance){
       hiAngely = instance;
       // Get the total guesses
-      return hiAngely.hi.call();
+      var start = await hiAngely.hi.call();
+      console.log(start.toString(10));
+      return ;
     }).then(function(result){
       console.log("Result string = ",result);
     });

@@ -17,9 +17,6 @@ contract('Up', function(accounts) {
 
       var end = await up.hi.call();
       console.log(end.toString(10));
-      //return up.hi.call();
-   // }).then(function(result){
-   //   console.log("Result string = ",result.toString(10));
     });
   });
 });

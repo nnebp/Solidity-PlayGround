@@ -1,6 +1,20 @@
 pragma solidity ^0.4.17;
-
+//import '/home/something/Dev/Eth/node_modules/openzeppelin-solidity/contracts/ownership/Ownable.sol';
+//^truffle version issue. huge waste of time
 contract Up {
+
+    //flag if eth is deposited and contract is used
+    bool isUsed = false;
+
+    //TODO time parameter
+    //TODO deal with time conversion on front end
+    function deposit(uint256 amount, uint256 length) payable public{
+        require(msg.value == amount);
+
+        isUsed = true;
+
+    }
+
     function hi() public view returns (uint256){
         //return "testing Up" + bytes32(now);
         return  now;

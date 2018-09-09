@@ -5,14 +5,23 @@ contract Up {
 
     //flag if eth is deposited and contract is used
     bool isUsed = false;
+    uint256 endTime;
 
-    //TODO time parameter
     //TODO deal with time conversion on front end
+    //TODO limit on length
+    //TODO check for overflows once openzeppelin can be imported
     function deposit(uint256 amount, uint256 length) payable public{
         require(msg.value == amount);
 
         isUsed = true;
+        endTime = now + length;
+    }
 
+    //TODO code to verify owner (save creator address)
+    function withdraw() public{
+        if (now > endTime) {
+            //send back money
+        }
     }
 
     function hi() public view returns (uint256){

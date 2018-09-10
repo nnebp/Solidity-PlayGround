@@ -5,6 +5,9 @@ contract Up {
 
     //flag if eth is deposited and contract is used
     bool isUsed = false;
+    //creator address
+    address ownerAddress;
+
     uint256 endTime;
 
     //TODO deal with time conversion on front end
@@ -13,6 +16,7 @@ contract Up {
     function deposit(uint256 amount, uint256 length) payable public{
         require(msg.value == amount);
 
+        ownerAddress = msg.sender;
         isUsed = true;
         endTime = now + length;
     }
@@ -20,6 +24,7 @@ contract Up {
     //TODO code to verify owner (save creator address)
     function withdraw() public{
         if (now > endTime) {
+            ownerAddress.transfer(address(this).balance);
             //send back money
         }
     }

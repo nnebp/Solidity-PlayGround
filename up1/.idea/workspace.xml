@@ -23,20 +23,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Up.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Up.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/Up.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-70">
-              <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+            <state relative-caret-position="313">
+              <caret line="48" selection-start-line="48" selection-end-line="48" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Up.sol" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Up.sol" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/contracts/Up.sol">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+            <state relative-caret-position="238">
+              <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -88,8 +88,8 @@
         <option value="$PROJECT_DIR$/contracts/up.sol" />
         <option value="$PROJECT_DIR$/test/HiAngely.js" />
         <option value="$PROJECT_DIR$/test/fastForwardTime.js" />
-        <option value="$PROJECT_DIR$/test/Up.js" />
         <option value="$PROJECT_DIR$/contracts/Up.sol" />
+        <option value="$PROJECT_DIR$/test/Up.js" />
       </list>
     </option>
   </component>
@@ -99,11 +99,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="888" />
-    <option name="y" value="56" />
-    <option name="width" value="1007" />
-    <option name="height" value="926" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-3" />
+    <option name="y" value="31" />
+    <option name="width" value="1926" />
+    <option name="height" value="1003" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -172,16 +172,15 @@
       <updated>1535935112704</updated>
       <workItem from="1535935113925" duration="7377000" />
       <workItem from="1536415942015" duration="6222000" />
-      <workItem from="1536438859768" duration="7068000" />
+      <workItem from="1536438859768" duration="10627000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20667000" />
+    <option name="totallyTimeSpent" value="24226000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="888" y="56" width="1007" height="926" extended-state="0" />
-    <editor active="true" />
+    <frame x="-3" y="31" width="1926" height="1003" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.24960506" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -190,7 +189,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.51194966" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.4667431" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -330,17 +329,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/Up.js">
+    <entry file="file://$PROJECT_DIR$/contracts/Up.sol">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-70">
-          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+        <state relative-caret-position="238">
+          <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/contracts/Up.sol">
+    <entry file="file://$PROJECT_DIR$/test/Up.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+        <state relative-caret-position="313">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
         </state>
       </provider>
     </entry>

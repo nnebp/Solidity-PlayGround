@@ -26,8 +26,8 @@
       <file leaf-file-name="Up.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/Up.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="48" selection-start-line="48" selection-end-line="48" />
+            <state relative-caret-position="170">
+              <caret line="47" column="6" selection-start-line="47" selection-start-column="6" selection-end-line="47" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -172,12 +172,12 @@
       <updated>1535935112704</updated>
       <workItem from="1535935113925" duration="7377000" />
       <workItem from="1536415942015" duration="6222000" />
-      <workItem from="1536438859768" duration="10627000" />
+      <workItem from="1536438859768" duration="11311000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24226000" />
+    <option name="totallyTimeSpent" value="24910000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="31" width="1926" height="1003" extended-state="6" />
@@ -338,8 +338,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/Up.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
+        <state relative-caret-position="170">
+          <caret line="47" column="6" selection-start-line="47" selection-start-column="6" selection-end-line="47" selection-end-column="6" />
         </state>
       </provider>
     </entry>

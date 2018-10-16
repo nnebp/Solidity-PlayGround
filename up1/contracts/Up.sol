@@ -1,6 +1,7 @@
 pragma solidity ^0.4.17;
 //import '/home/something/Dev/Eth/node_modules/openzeppelin-solidity/contracts/ownership/Ownable.sol';
 //^truffle version issue. huge waste of time
+// ^this is an issue with some npm modules at a higher directoy i think
 contract Up {
 
     //flag if eth is deposited and contract is used

@@ -2,6 +2,18 @@ var Up = artifacts.require("./Up.sol");
 var timeHelper = require('./fastForwardTime');
 //https://github.com/pooleja/UlyssesPact
 
+//Test the factory
+//TODO HOW??
+contract('UpFactory', function(accounts) {
+  it("should assert true", function() {
+    var upFactory;
+    return UpFactory.deployed().then(async function(instance) {
+      upFactory = instance;
+      console.log("contract factory address: " + upFactory.address);
+    });
+  });
+});
+
 contract('Up', function(accounts) {
   it("should assert true", function() {
     var up;

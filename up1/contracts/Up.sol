@@ -30,3 +30,18 @@ contract Up {
         }
     }
 }
+
+contract UpFactory {
+    mapping (address => address) ups;
+
+    //TODO test
+    function createPact() public {
+        if (ups[msg.sender] == 0) { //one contract per factory
+            ups[msg.sender] = new Up();
+            //TODO roll the deposit in with the creation?
+        }
+    }
+
+    //TODO deposit
+    //TODO withdrawl
+}

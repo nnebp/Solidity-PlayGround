@@ -42,6 +42,11 @@ contract UpFactory {
         }
     }
 
+    function deposit(uint256 amount, uint256 length) payable public{
+        require(ups[msg.sender] != 0);
+        Up(ups[msg.sender]).deposit(amount, length);
+    }
+
     //TODO deposit
     //TODO withdrawl
 }

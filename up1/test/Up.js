@@ -1,19 +1,25 @@
-var Up = artifacts.require("./Up.sol");
+var Up = artifacts.require("Up"); //don't include file name. just contract name
+var UpFactory = artifacts.require('UpFactory');
 var timeHelper = require('./fastForwardTime');
 //https://github.com/pooleja/UlyssesPact
 
 //Test the factory
-//TODO HOW??
 contract('UpFactory', function(accounts) {
   it("should assert true", function() {
     var upFactory;
     return UpFactory.deployed().then(async function(instance) {
       upFactory = instance;
       console.log("contract factory address: " + upFactory.address);
+      upFactory.createPact(); //test to see which contract is deployed
+
+      assert(true);//TODO change
     });
   });
 });
 
+//TODO something is hanging
+
+//Test the UP
 contract('Up', function(accounts) {
   it("should assert true", function() {
     var up;

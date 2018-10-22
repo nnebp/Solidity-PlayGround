@@ -22,7 +22,7 @@ contract Up {
         endTime = now + length;
     }
 
-    //TODO code to verify owner (save creator address)
+    //TODO code to verify owner (save creator address). is this really needed???
     function withdraw() public{
         if (now > endTime) {
             ownerAddress.transfer(address(this).balance);
@@ -47,6 +47,8 @@ contract UpFactory {
         Up(ups[msg.sender]).deposit(amount, length);
     }
 
-    //TODO deposit
-    //TODO withdrawl
+    function withdraw() public{
+        require(ups[msg.sender] != 0);
+        Up(ups[msg.sender]).withdraw();
+    }
 }

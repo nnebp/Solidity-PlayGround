@@ -11,6 +11,9 @@ contract Up {
 
     uint256 endTime;
 
+    event Deposit(uint256 amount, uint256 length);
+    event Withdraw();
+
     //TODO deal with time conversion on front end
     //TODO limit on length
     //TODO check for overflows once openzeppelin can be imported
@@ -20,6 +23,7 @@ contract Up {
         ownerAddress = msg.sender;
         isUsed = true;
         endTime = now + length;
+        emit Deposit(amount, length);
     }
 
     //TODO code to verify owner (save creator address). is this really needed???
@@ -28,16 +32,22 @@ contract Up {
             ownerAddress.transfer(address(this).balance);
             //send back money
         }
+        emit Withdraw();
+        //TODO contract suicide
     }
 }
 
 contract UpFactory {
     mapping (address => address) ups;
+    event PactCreated(address _address);
 
     //TODO test
     function createPact() public {
         if (ups[msg.sender] == 0) { //one contract per factory
+            //TODO fire event
             ups[msg.sender] = new Up();
+
+            emit PactCreated(ups[msg.sender]);
             //TODO roll the deposit in with the creation?
         }
     }

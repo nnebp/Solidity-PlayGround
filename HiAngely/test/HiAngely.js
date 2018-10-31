@@ -7,7 +7,7 @@ contract('HiAngely', function(accounts) {
       hiAngely = instance;
       // Get the total guesses
       var start = await hiAngely.hi();
-      console.log('the string =' + start.toString(10));
+      console.log('the string =' + start.toString(10) + " contract address is: " + hiAngely.address);
       return ;
     });
   });

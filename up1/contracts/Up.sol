@@ -61,4 +61,8 @@ contract UpFactory {
         require(ups[msg.sender] != 0);
         Up(ups[msg.sender]).withdraw();
     }
+
+    //TODO delete function hi() public view returns (string){
+        return "method called successfully!";
+    }
 }
